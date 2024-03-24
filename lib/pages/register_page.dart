@@ -66,87 +66,90 @@ class _RegisterPageState extends State<RegisterPage> {
           .of(context)
           .colorScheme
           .background,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          //logo
-          Icon(
-            Icons.lock_open_rounded,
-            size: 100,
-            color: Theme
-                .of(context)
-                .colorScheme
-                .inversePrimary,
-          ),
-          const SizedBox(height: 25),
-          //message,app slogan
-          Text(
-            "Let's create an Account!",
-            style: TextStyle(
-              fontSize: 16,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //logo
+            Icon(
+              Icons.lock_open_rounded,
+              size: 100,
               color: Theme
                   .of(context)
                   .colorScheme
                   .inversePrimary,
             ),
-          ),
-          const SizedBox(height: 25),
-          //email textfield
-          MyTextField(
-            controller: emailController,
-            hintText: "Email",
-            obscureText: false,
-          ),
-          const SizedBox(height: 25),
-          //password textfield
-          MyTextField(
-            controller: passwordController,
-            hintText: "Password",
-            obscureText: true,
-          ),
-          const SizedBox(height: 25),
-          //password textfield
-          MyTextField(
-            controller: confirmPasswordController,
-            hintText: "Confirm Password",
-            obscureText: true,
-          ),
-          const SizedBox(height: 25),
-          //sign up button
-          MyButton(
-            text: "Sign Up",
-            onTop: () {},
-          ),
-          const SizedBox(height: 25),
-          //not a member? register now
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Already have an Account?",
-                style: TextStyle(
-                    color: Theme
-                        .of(context)
-                        .colorScheme
-                        .inversePrimary),
+            const SizedBox(height: 25),
+            //message,app slogan
+            Text(
+              "Let's create an Account!",
+              style: TextStyle(
+                fontSize: 16,
+                color: Theme
+                    .of(context)
+                    .colorScheme
+                    .inversePrimary,
               ),
-              const SizedBox(height: 25),
-              GestureDetector(
-                  onTap: widget.onTap,
-                  child: Text(
-                    "Login Now",
-                    style: TextStyle(
+            ),
+            const SizedBox(height: 25),
+            //email textfield
+            MyTextField(
+              controller: emailController,
+              hintText: "Email",
+              obscureText: false,
+            ),
+            const SizedBox(height: 25),
+            //password textfield
+            MyTextField(
+              controller: passwordController,
+              hintText: "Password",
+              obscureText: true,
+            ),
+            const SizedBox(height: 25),
+            //password textfield
+            MyTextField(
+              controller: confirmPasswordController,
+              hintText: "Confirm Password",
+              obscureText: true,
+            ),
+            const SizedBox(height: 25),
+            //sign up button
+            MyButton(
+              text: "Sign Up",
+              onTop: () {},
+            ),
+            const SizedBox(height: 25),
+            //not a member? register now
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Already have an Account?",
+                  style: TextStyle(
                       color: Theme
                           .of(context)
                           .colorScheme
-                          .inversePrimary,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
-              )
-            ],
-          )
-        ],
+                          .inversePrimary),
+                ),
+                const SizedBox(height: 25),
+                GestureDetector(
+                    onTap: widget.onTap,
+                    child: Text(
+                      "Login Now",
+                      style: TextStyle(
+                        color: Theme
+                            .of(context)
+                            .colorScheme
+                            .inversePrimary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

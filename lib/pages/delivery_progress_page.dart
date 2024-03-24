@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/components/my_receipt.dart';
 import 'package:food_delivery/model/restaurant.dart';
 import 'package:food_delivery/services/database/firestore.dart';
 import 'package:provider/provider.dart';
@@ -35,7 +36,7 @@ FirestoreService db =FirestoreService();
       bottomNavigationBar: _buildBottomNavBar(context),
       body: const Column(
         children: [
-
+          MyReceipt(),
         ],
       )
     );

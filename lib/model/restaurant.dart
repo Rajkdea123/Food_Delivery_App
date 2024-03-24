@@ -9,7 +9,7 @@ class Restaurant extends ChangeNotifier{
 final List<Food>menu=[
 
   //burgers
-Food(name: "Classic Cheeseburger",
+Food(name: "Cheeseburger",
   description: "A juicy beef patty with method cheddar,lettuce,tomato,and a hint of onion and pickle.",
 imagePath: "lib/images/burgers/cheese_burger.png",
  price: 0.99,
